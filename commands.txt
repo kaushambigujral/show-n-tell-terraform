@@ -1,0 +1,22 @@
+-------------------------------------------
+------------ Terraform + Azure ------------
+------------ Useful   Commands ------------
+-------------------------------------------
+
+
+Azure CLI
+1. az login
+2. az account list : shows all subscriptions under your account
+3. az account show –name Sandbox : brings up details for the subscription with name 'Sandbox'
+4. az account list --query "[?user.name=='kaushambi.gujral@eroad.com'].{Name:name, ID:id, Default:isDefault}" --output Table : brings up the names, ids, and isDefault for all the subscriptions
+-------------------------------------------
+
+Terraform
+
+1. terraform init
+2. terraform plan
+3. terraform plan -out main.tfplan
+4. terraform apply main.tfplan
+5. terraform plan -var="resouce_grp_name=my-rg" //use variable value
+6. terraform plan -var-file=dev.tfvars //use variable file
+-------------------------------------------
