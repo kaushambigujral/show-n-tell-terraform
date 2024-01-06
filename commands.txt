@@ -19,4 +19,9 @@ Terraform
 4. terraform apply main.tfplan
 5. terraform plan -var="resouce_grp_name=my-rg" //use variable value
 6. terraform plan -var-file=dev.tfvars //use variable file
+7. terraform plan -out main.tfplan -var="resouce_grp_name=my-rg" //use variable value
+8. terraform plan -out dev.tfplan -var-file=dev.tfvars //use variable file
+9. terrafrom apply dev.tfplan
+-------------------------------------------
+Github Link: https://github.com/kaushambigujral/show-n-tell-terraform
 -------------------------------------------
