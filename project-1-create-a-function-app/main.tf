@@ -1,4 +1,7 @@
 terraform {
+  # providers convey to terraform which env your are going to work with
+  # https://registry.terraform.io/browse/providers
+  # we will work with azure
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
