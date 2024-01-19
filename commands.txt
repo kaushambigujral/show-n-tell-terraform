@@ -6,9 +6,10 @@
 
 Azure CLI
 1. az login
-2. az account list : shows all subscriptions under your account
-3. az account show –name Sandbox : brings up details for the subscription with name 'Sandbox'
-4. az account list --query "[?user.name=='kaushambi.gujral@eroad.com'].{Name:name, ID:id, Default:isDefault}" --output Table : brings up the names, ids, and isDefault for all the subscriptions
+2. az account list # shows all subscriptions under your account
+3. az account show –name Sandbox # brings up details for the subscription with name 'Sandbox'
+4. az account list --query "[?user.name=='kaushambi.gujral@eroad.com'].{Name:name, ID:id, Default:isDefault}" --output Table # brings up the names, ids, and isDefault for all the subscriptions
+5. az account set --subscription Sandbox # activate "Sandbox" subscription
 -------------------------------------------
 
 Terraform
@@ -17,11 +18,21 @@ Terraform
 2. terraform plan
 3. terraform plan -out main.tfplan
 4. terraform apply main.tfplan
-5. terraform plan -var="resouce_grp_name=my-rg" //use variable value
-6. terraform plan -var-file=dev.tfvars //use variable file
-7. terraform plan -out main.tfplan -var="resouce_grp_name=my-rg" //use variable value
-8. terraform plan -out dev.tfplan -var-file=dev.tfvars //use variable file
+5. terraform plan -var="resouce_grp_name=my-rg" #use variable value
+6. terraform plan -var-file=dev.tfvars #use variable file
+7. terraform plan -out main.tfplan -var="resouce_grp_name=my-rg" #use variable value
+8. terraform plan -out dev.tfplan -var-file=dev.tfvars #use variable file
 9. terrafrom apply dev.tfplan
 -------------------------------------------
 Github Link: https://github.com/kaushambigujral/show-n-tell-terraform
--------------------------------------------
+------------------------------------------
+
+Import Existing Resources on Azure into Terraform
+
+Step 1. Write the script for the resource you want to import
+Step 2. Run terraform init
+		Run terraform import 
+Step 3. Run terraform plan (confirm that there should not be any changes)
+
+Refer to project-6
+------------------------------------------
